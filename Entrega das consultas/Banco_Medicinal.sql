@@ -548,15 +548,4 @@ INSERT INTO Consulta (id_consulta, id_paciente, id_funcionario, id_sala, id_rece
 (50, 50, 10, 10, 50, 36.6, '115/75', 72, 'Febre baixa persistente', '2025-01-26 08:45:00');
 
 
-SELECT 
-    p.nome AS Paciente,
-    c.temperatura,
-    c.data_hora,
-    f.nome AS Medico
-FROM Consulta c
-JOIN Paciente p
-    ON c.id_paciente = p.id_paciente
-JOIN Funcionario f
-    ON c.id_funcionario = f.id_funcionario;
-
-
+show tables;

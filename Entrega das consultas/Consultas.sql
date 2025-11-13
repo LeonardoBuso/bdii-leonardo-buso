@@ -26,11 +26,17 @@ use Hospital_BD;
 	select id_funcionario, count(*) as total_consultas from consulta group by id_funcionario;
 
 -- Ex 9) Calcule o total de medicamentos cadastrados no estoque:
-	
+	select count(*) as total_medicamentos from remedio;
 
--- Ex 15) Mostre a média de idade dos pacientes:
+-- Ex 10) Mostre a média de idade dos pacientes:
+SELECT 
+    ROUND(AVG(TIMESTAMPDIFF(YEAR, data_nascimento, CURDATE())), 0) AS media_idades
+FROM Paciente;
 
+-- usar avg para fazer a média e a fórmula para calcular as idade a partir da data de nascimento dentro do parênteses
+  
 -- Ex 16) Liste os cargos que possuem mais de 3 funcionários:
+	
 
 -- Ex 17) Mostre os estados (UF_paciente) com mais de 5 pacientes:
 
